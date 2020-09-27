@@ -8,6 +8,6 @@ public class GugudanTest {
 			for (int j = 1; j <= num; j++) {
 				System.out.printf("%d * %d = %d\n",i,j,i * j);
 			}
-		}
+		}sc.close();
 	}
 }

@@ -10,6 +10,6 @@ public class GugudanTest2 {
 			for(int j=1;j<=y;j++) {
 				System.out.printf("%d * %d = %d\n", i,j,i*j);
 			}
-		}
+		}sc.close();
 	}
 }

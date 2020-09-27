@@ -2,7 +2,6 @@ package honux.calendar;
 
 import java.time.LocalDate;
 import java.time.Year;
-import java.util.Calendar;
 import java.util.Scanner;
 
 public class CalendarEx2 {
@@ -46,6 +45,6 @@ public class CalendarEx2 {
 			printCalendar(month);
 		}
 		System.out.println("프로그램 종료");
-		
+		sc.close();
 	}
 }

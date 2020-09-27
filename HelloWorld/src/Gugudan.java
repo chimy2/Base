@@ -85,6 +85,6 @@ public class Gugudan {
 			for (int k = 1; k <= 9; k++) {
 				System.out.println(number * k);
 			}
-		}
+		}scanner.close();
 	}
 }
