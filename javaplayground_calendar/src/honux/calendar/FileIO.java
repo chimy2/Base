@@ -5,8 +5,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class FileIO {
@@ -28,7 +26,6 @@ public class FileIO {
 			StringBuffer sb=new StringBuffer();
 			BufferedReader br=new BufferedReader(new FileReader(file));
 			BufferedWriter bw;
-			List<String> list=new ArrayList<String>();
 			if(getSchedule(date)==null) {
 				bw =new BufferedWriter(new FileWriter(file,true));
 				sb.append(date+", "+schedule+"\n");
