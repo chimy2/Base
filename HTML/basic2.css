@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+body {
+	margin: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	background: #8CBD8C;
+}
+a {
+	color: yellow;
+}
+
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 20px;
+}
+
+.display {
+	width: 45%;
+	height: 100px;
+	padding: 5px;
+	background: white;
+	border: 4px solid black;
+	border-style: double;
+}
+
+.flex {
+	display: flex;
+}
+.inline-flex {
+	display: inline-flex;
+}
+
+.basic2 {
+	height: 300px;
+	background: white;
+}
+
+.basic {
+	height: 120px;
+	background: white;
+}
+
+div div { 
+	margin: 5px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border: 2px solid black;
+	color: black;
+	background: pink;
+}
+.big {
+	width: 240px;
+	height: 60px;
+}
+.auto {
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+}
+.row {
+	flex-direction: row;
+}
+.row:hover {
+	flex-direction: row-reverse;
+}
+.column {
+	flex-direction: column;
+}
+.column:hover {
+	flex-direction: column-reverse;
+	flex-wrap: nowrap;
+}
+.nowrap {
+	flex-wrap: nowrap;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+.wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.justify-flex-start {
+	justify-content: flex-start;
+}
+.justify-flex-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-space-between {
+	justify-content: space-between;
+}
+.justify-space-around {
+	justify-content: space-around;
+}
+
+.align-content-stretch {
+	flex-wrap:wrap;
+	align-content: stretch;
+}
+.align-content-flex-start {
+	flex-wrap:wrap;
+	align-content: flex-start;
+}
+.align-content-flex-end {
+	flex-wrap:wrap;
+	align-content: flex-end;
+}
+.align-content-center {
+	flex-wrap:wrap;
+	align-content: center;
+}
+.align-content-space-between {
+	flex-wrap:wrap;
+	align-content: space-between;
+}
+.align-content-space-around {
+	flex-wrap:wrap;
+	align-content: space-around;
+}
+
+.align-items-stretch {
+	flex-wrap:wrap;
+	align-items: stretch;
+}
+.align-items-flex-start {
+	flex-wrap:wrap;
+	align-items: flex-start;
+}
+.align-items-flex-end {
+	flex-wrap:wrap;
+	align-items: flex-end;
+}
+.align-items-center {
+	flex-wrap:wrap;
+	align-items: center;
+}
+.align-items-baseline {
+	flex-wrap:wrap;
+	align-items: baseline;
+}

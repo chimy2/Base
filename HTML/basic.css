@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+body {
+	margin: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+div, span {
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+}
+
+div {
+	background: red;
+}
+
+span {
+	background: orange;
+}
+
+.inline {
+	display: inline;
+}
+.inline-block {
+	display: inline-block;
+}
+.block {
+	display: block;
+}
+
+main {
+	height: 300px;
+	width:100%;
+}
+
+section {
+	display: inline-block;
+	background: pink;
+	width: 25%;
+	height: 300px;
+	float:left;
+}
+
+section h4{
+	margin:15px;
+	text-align: center;
+}
+
+section div{
+	margin:auto;
+	width: 80%;
+	height: 60%;
+	background: white;
+}
+
+section div div{
+	margin:auto;
+	width: 60px;
+	height: 100px;
+	background: black;
+}
+
+.static:hover {
+	position: static;
+	left: 20px;
+	top: 20px;
+}
+.relative:hover {
+	position: relative;
+	left: 20px;
+	top: 20px;
+}
+.absolute:active {
+	position: absolute;
+	left: 20px;
+	top: 1920px;
+}
+.fixed:active {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+}

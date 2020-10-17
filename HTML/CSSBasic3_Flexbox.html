@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexbox : CSS Basic3</title>
+<link rel="stylesheet" href="basic2.css">
+</head>
+<body>
+	<h1>CSS Basic3</h1>
+	<h2>Flexbox</h2>
+	<h3>1. flex container</h3>
+	<h4>1) display</h4>
+	<h4>(1) flex</h4>
+	<div class="display flex">container1</div>
+	<div class="display flex">container2</div>
+	<h4>(2) inline-flex</h4>
+	<div class="display inline-flex">container1</div>
+	<div class="display inline-flex">container2</div>
+	<h4>2) flex-direction</h4>
+	<h4>(1) row vs row-reverse</h4>
+	<div class="flex basic row">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<h4>(2) column vs column-reverse</h4>
+	<div class="flex basic2 column">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<h4>3) flex-wrap</h4>
+	<h4>(1) nowrap</h4>
+	<div class="flex basic2 nowrap">
+		<div class="big">1</div>
+		<div class="big">2</div>
+		<div class="big">3</div>
+	</div>
+	<h4>(2) wrap</h4>
+	<div class="flex basic2 wrap">
+		<div class="big">1</div>
+		<div class="big">2</div>
+		<div class="big">3</div>
+	</div>
+	<h4>(3) wrap-reverse</h4>
+	<div class="flex basic2 wrap-reverse">
+		<div class="big">1</div>
+		<div class="big">2</div>
+		<div class="big">3</div>
+	</div>
+	<h4>4) flex-flow</h4>
+	<h4>- ex. flex-flow: flex-direction flex-wrap;</h4>
+	<h4>5) justify-content</h4>
+	<h4>(1) flex-start</h4>
+	<div class="flex basic justify-flex-start">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<h4>(2) flex-end</h4>
+	<div class="flex basic justify-flex-end">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<h4>(3) center</h4>
+	<div class="flex basic justify-center">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<h4>(4) space-between</h4>
+	<div class="flex basic justify-space-between">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<h4>(5) space-around</h4>
+	<div class="flex basic justify-space-around">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<h4>6) align-content</h4>
+	<h4>(1) stretch</h4>
+	<div class="flex basic2 align-content-stretch">
+		<div class="auto">1</div>
+		<div class="auto">2</div>
+		<div class="auto">3</div>
+		<div class="auto">4</div>
+	</div>
+	<h4>(2) flex-start</h4>
+	<div class="flex basic2 align-content-flex-start">
+		<div class="auto">1</div>
+		<div class="auto">2</div>
+		<div class="auto">3</div>
+		<div class="auto">4</div>
+	</div>
+	<h4>(3) flex-end</h4>
+	<div class="flex basic2 align-content-flex-end">
+		<div class="auto">1</div>
+		<div class="auto">2</div>
+		<div class="auto">3</div>
+		<div class="auto">4</div>
+	</div>
+	<h4>(4) center</h4>
+	<div class="flex basic2 align-content-center">
+		<div class="auto">1</div>
+		<div class="auto">2</div>
+		<div class="auto">3</div>
+		<div class="auto">4</div>
+	</div>
+	<h4>(5) space-between</h4>
+	<div class="flex basic2 align-content-space-between">
+		<div class="auto">1</div>
+		<div class="auto">2</div>
+		<div class="auto">3</div>
+		<div class="auto">4</div>
+	</div>
+	<h4>(6) space-around</h4>
+	<div class="flex basic2 align-content-space-around">
+		<div class="auto">1</div>
+		<div class="auto">2</div>
+		<div class="auto">3</div>
+		<div class="auto">4</div>
+	</div>
+	<h4>7) align-items</h4>
+	<h4>(1) stretch</h4>
+	<div class="flex basic2 align-items-stretch">
+		<div style="height:100px; line-height: 100px;">1</div>
+		<div style="height:80px; line-height: 80px;">2</div>
+		<div style="height:40px; line-height: 40px;">3</div>
+		<div style="height:60px; line-height: 60px;">4</div>
+		<div style="height:20px; line-height: 20px;">5</div>
+		<div style="height:80px; line-height: 80px;">6</div>
+		<div style="height:100px; line-height: 100px;">7</div>
+		<div style="height:40px; line-height: 40px;">8</div>
+	</div>
+	<h4>(2) flex-start</h4>
+	<div class="flex basic2 align-items-flex-start">
+		<div style="height:100px; line-height: 100px;">1</div>
+		<div style="height:80px; line-height: 80px;">2</div>
+		<div style="height:40px; line-height: 40px;">3</div>
+		<div style="height:60px; line-height: 60px;">4</div>
+		<div style="height:20px; line-height: 20px;">5</div>
+		<div style="height:80px; line-height: 80px;">6</div>
+		<div style="height:100px; line-height: 100px;">7</div>
+		<div style="height:40px; line-height: 40px;">8</div>
+	</div>
+	<h4>(3) flex-end</h4>
+	<div class="flex basic2 align-items-flex-end">
+		<div style="height:100px; line-height: 100px;">1</div>
+		<div style="height:80px; line-height: 80px;">2</div>
+		<div style="height:40px; line-height: 40px;">3</div>
+		<div style="height:60px; line-height: 60px;">4</div>
+		<div style="height:20px; line-height: 20px;">5</div>
+		<div style="height:80px; line-height: 80px;">6</div>
+		<div style="height:100px; line-height: 100px;">7</div>
+		<div style="height:40px; line-height: 40px;">8</div>
+	</div>
+	<h4>(4) center</h4>
+	<div class="flex basic2 align-items-center">
+		<div style="height:100px; line-height: 100px;">1</div>
+		<div style="height:80px; line-height: 80px;">2</div>
+		<div style="height:40px; line-height: 40px;">3</div>
+		<div style="height:60px; line-height: 60px;">4</div>
+		<div style="height:20px; line-height: 20px;">5</div>
+		<div style="height:80px; line-height: 80px;">6</div>
+		<div style="height:100px; line-height: 100px;">7</div>
+		<div style="height:40px; line-height: 40px;">8</div>
+	</div>
+	<h4>(5) baseline</h4>
+	<div class="flex basic2 align-items-baseline">
+		<div style="height:100px; line-height: 100px;">1</div>
+		<div style="height:80px; line-height: 80px;">2</div>
+		<div style="height:40px; line-height: 40px;">3</div>
+		<div style="height:60px; line-height: 60px;">4</div>
+		<div style="height:20px; line-height: 20px;">5</div>
+		<div style="height:80px; line-height: 80px;">6</div>
+		<div style="height:100px; line-height: 100px;">7</div>
+		<div style="height:40px; line-height: 40px;">8</div>
+	</div>
+	<h3>2. flex item</h3>
+	<h4>1) order</h4>
+	<div class="flex basic">
+		<div class="big" style="order: 4; height: 105px; line-height: normal;">첫번째 요소<br>order : 4</div>
+		<div class="big" style="order: 2; height: 105px; line-height: normal;">두번째 요소<br>order : 2</div>
+		<div class="big" style="order: 3; height: 105px; line-height: normal;">세번째 요소<br>order : 3</div>
+		<div class="big" style="order: 1; height: 105px; line-height: normal;">네번째 요소<br>order : 1</div>
+	</div>
+	<h4>2) flex-grow</h4>
+	<div class="flex basic">
+		<div style="flex-grow:1;">1</div>
+		<div style="flex-grow:2;">2</div>
+		<div style="flex-grow:3;">3</div>
+		<div style="flex-grow:4;">4</div>
+	</div>
+	<h4>3) flex-shrink</h4>
+	<div class="flex basic">
+		<div class="big" style="flex-shrink:1;">1</div>
+		<div class="big" style="flex-shrink:2;">2</div>
+		<div class="big" style="flex-shrink:3;">3</div>
+		<div class="big" style="flex-shrink:4;">4</div>
+	</div>
+	<h4>4) flex-basis</h4>
+	<div class="flex basic">
+		<div style="flex-basis: 200px;">1</div>
+		<div style="flex-basis: 200px;">2</div>
+		<div style="flex-basis: 200px;">3</div>
+		<div style="flex-basis: 200px;">4</div>
+	</div>
+	<h4>5) flex</h4>
+	<h4>- ex. flex: flex-grow flex-shrink flex-basis;</h4>
+	<h4>6) align-self</h4>
+	<div class="flex basic">
+		<div style="align-self: auto; width:120px; height: auto;">auto</div>
+		<div style="align-self: stretch; width:120px; height: auto;">stretch</div>
+		<div style="align-self: flex-start; width:120px; height: auto;">flex-start</div>
+		<div style="align-self: flex-end; width:120px; height: auto;">flex-end</div>
+		<div style="align-self: center; width:120px; height: auto;">center</div>
+		<div style="align-self: baseline; width:120px; height: auto;">baseline</div>
+	</div>
+	<h4>% vs vh, vw</h4>
+	<ul>
+		<li>% : 부모의 해당 속성을 물려 받음</li>
+		<li>vh : viewheight, 화면 상 보이는 높이의 %</li>
+		<li>vh : viewwidth, 화면 상 보이는 넓이의 %</li>
+	</ul>
+	<h4>FLEXBOX FROGGY</h4>
+	<ul>
+		<li><a href="https://flexboxfroggy.com/">https://flexboxfroggy.com/</a></li>
+		<li>flexbox game</li>
+		<li>css display flexbox에 대한 내용을 문제를 풀며 알아가보기</li>
+	</ul>
+	<h4>color tool</h4>
+	<ul>
+		<li><a href="https://material.io/resources/color/">https://material.io/resources/color/</a>
+		<li>UI를 만들 때 이쁜 색조합을 볼 수 있는 사이트</li>
+	</ul>
+	<h4>참고 사이트</h4>
+	<ul>
+		<li><a href="https://css-tricks.com/">https://css-tricks.com/</a></li>
+	</ul>
+</body>
+</html>

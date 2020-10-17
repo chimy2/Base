@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Display & Position : CSS Basic2</title>
+<link rel="stylesheet" href="basic.css">
+</head>
+<body>
+	<h1>CSS Basic2</h1>
+	<h2>Display</h2>
+	<h3>1. div와 span의 차이</h3>
+	<h4>(1) 빈공간</h4>
+	<div></div>
+	<p>div는 기본적으로 block display이기 때문에 안에 요소가 없어도 공간을 차지한다</p>
+	<span></span>
+	<p>span은 기본적으로 inline display이기 때문에 안에 요소가 없으면 공간을 차지하지 않는다</p>
+	<h3>(2) text</h3>
+	<div>div 입니다</div>
+	<p>공간이 설정된 만큼 공간 안에 요소들이 나열됩니다</p>
+	<span>span 입니다</span>
+	<p>공간의 설정과 상관없이 요소의 크기만큼 공간을 차지합니다</p>
+	<h3>2. Display</h3>
+	<h4>(1) inline</h4>
+	<div class="inline"></div>
+	<div class="inline"></div>
+	<div class="inline"></div>
+	<br>
+	<div class="inline">1</div>
+	<div class="inline">2</div>
+	<div class="inline">3</div>
+	<h4>(2) inline-block</h4>
+	<div class="inline-block"></div>
+	<div class="inline-block"></div>
+	<div class="inline-block"></div>
+	<br>
+	<div class="inline-block">1</div>
+	<div class="inline-block">2</div>
+	<div class="inline-block">3</div>
+	<h4>(3) block</h4>
+	<div class="block"></div>
+	<div class="block"></div>
+	<div class="block"></div>
+	<br>
+	<div class="block">1</div>
+	<div class="block">2</div>
+	<div class="block">3</div>
+	<h2>Position</h2>
+	<main>
+		<section>
+			<h4>static</h4>
+			<div>
+				<div class="static"></div>
+			</div>
+			<h4>고정</h4>
+		</section>
+		<section>
+			<h4>relative</h4>
+			<div>
+				<div class="relative"></div>
+			</div>
+			<h4>hover</h4>
+		</section>
+		<section>
+			<h4>absolute</h4>
+			<div>
+				<div class="absolute"></div>
+			</div>
+			<h4>클릭</h4>
+		</section>
+		<section>
+			<h4>fixed</h4>
+			<div>
+				<div class="fixed"></div>
+			</div>
+			<h4>클릭 & 스크롤</h4>
+		</section>
+	</main>
+	<h3>Can I USE _________?</h3>
+	<ul>
+		<li><a href="https://caniuse.com/">https://caniuse.com/</a></li>
+		<li>해당 CSS element를 여러 웹브라우저가 얼마나 지원하는지 보여주는 사이트</li>
+	</ul>
+</body>
+</html>

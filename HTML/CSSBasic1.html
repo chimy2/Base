@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Basic1</title>
+<style>
+body {
+	margin: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+ol li {
+	padding:5px;
+}
+</style>
+</head>
+<body>
+	<h1>CSS Basic</h1>
+	<h2>CSS</h2>
+	<ul>
+		<li>Cascading Style Sheets</li>
+		<li>HTML, XML로 작성된 문서의 표현을 기술하는 스타일 시트 언어</li>
+	</ul>
+	<h2>CSS의 구조</h2>
+	<pre>
+Selector {
+    Property: Property value; &lt;- Declaration
+}
+	</pre>
+	<h2>CSS 선택자(selector)</h2>
+	<ol>
+		<li>Type selector
+			<ul type="disc">
+				<li>tag { }</li>
+				<li>해당하는 모든 HTML 태그 선택</li>
+			</ul>
+		</li>
+		<li>Universal selector
+			<ul type="disc">
+				<li>* {  }</li>
+				<li>문서의 모든 항목 선택</li>
+			</ul>
+		</li>
+		<li>Class selector
+			<ul type="disc">
+				<li>.class {  }</li>
+				<li>class 속성값과 같은 항목 선택</li>
+			</ul>
+		</li>
+		<li>id selector
+			<ul type="disc">
+				<li>#id { }</li>
+				<li>id 속성값과 같은 항목 선택</li>
+			</ul>
+		</li>
+		<li>Attribute selector
+			<ul type="disc">
+				<li>tag[attribute] { }</li>
+				<li>해당 태그의 해당 속성값과 같은 항목 선택</li>
+			</ul>
+		</li>
+		<li>Pseudo-class selectors
+			<ul type="disc">
+				<li>tag:state { }</li>
+				<li>해당 태그가 특정 상태인 항목 선택</li>
+			</ul>
+		</li>
+		<li>Pseudo-element selectors
+			<ul type="disc">
+				<li>tag::part { }</li>
+				<li>해당 태그의 특정 부분 선택</li>
+			</ul>
+		</li>
+		<li>Descendant combinator
+			<ul type="disc">
+				<li>selector1 selector2 { }</li>
+				<li>특정 부모의 자식 선택</li>
+			</ul>
+		</li>
+		<li>Child combinator
+			<ul type="disc">
+				<li>selector1 > selector2 { }</li>
+				<li>특정 부모의 첫번째 하위요소 선택</li>
+			</ul>
+		</li>
+		<li>Adjacent sibling combinator
+			<ul type="disc">
+				<li>former_element + target_element { }</li>
+				<li>former요소 다음 위치에 해당하는 target 요소 선택</li>
+			</ul>
+		</li>
+		<li>General sibling combinator
+			<ul type="disc">
+				<li>former_element ~ target_element { }</li>
+				<li>전후 요소의 부모가 같고 후자 요소가 뒤에 있을 때 선택</li>
+			</ul>
+		</li>
+	</ol>
+	<h2>CSS 게임으로 알아보기</h2>
+	<a href="https://flukeout.github.io">https://flukeout.github.io</a>
+</body>
+</html>
