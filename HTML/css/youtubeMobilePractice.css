@@ -1,0 +1,215 @@
+:root {
+  --text-color: #212121;
+  --text-week-color: #efefef;
+  --text-week-color2: #616161;
+  --background-color: #fafafa;
+  --accent-color1: #c85a54;
+  --accent-color2: #932b2b;
+  --accent-color3: #0d47a1;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Roboto";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--accent-color1);
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: "Sansita Swashed";
+}
+
+a {
+  text-decoration: none;
+}
+
+header a {
+  color: white;
+  padding: 5px;
+}
+
+.header_logo a i {
+  color: var(--accent-color2);
+}
+
+.header_logo a i {
+  color: var(--accent-color2);
+}
+
+video {
+  /*position: sticky;
+   top: 0; */
+  width: 100%;
+}
+
+main {
+  padding: 10px;
+}
+
+.tag {
+  color: var(--accent-color3);
+  font-size: 14px;
+}
+
+.titleName {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  overflow: hidden;
+  height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.titleContent {
+  color: var(--text-week-color2);
+  font-size: 15px;
+}
+
+.titleIcon ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.titleIcon ul li {
+  text-align: center;
+}
+
+.titleIcon ul li a {
+  color: var(--text-week-color2);
+}
+
+.titleIcon ul li a i {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.titleIcon ul li a i:hover {
+  color: var(--accent-color3);
+}
+
+hr {
+  border: 2px solid var(--text-week-color);
+}
+
+.chimtuber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chimtuberInfo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.chimtuberInfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.chimtuberInfo ul {
+  margin: 0 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.chimtuberInfo ul li {
+  padding: 2px;
+}
+
+.chimtuberInfoName {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chimtuberInfoSubs {
+  color: var(--text-week-color2);
+}
+
+.chimtuberSubs a {
+  color: var(--accent-color2);
+  font-weight: bold;
+}
+
+main p {
+  font-size: 18px;
+  color: var(--text-week-color2);
+}
+
+.nextVideoUl {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nextVideoList {
+  display: flex;
+}
+
+.nextVideoIMG img {
+  min-width: 150px;
+  width: 20vw;
+  display: inline;
+}
+
+.nextVideoLink {
+  display: flex;
+}
+
+.nextVideoTitle {
+  margin: 0 20px;
+  padding: 3px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  height: 90%;
+  color: var(--text-color);
+}
+
+.nextVideoTitleMain {
+  overflow: hidden;
+  height: 40px;
+}
+
+.nextVideoTitleCreater {
+  color: var(--text-week-color2);
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1016px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .content {
+    flex-grow: 1;
+  }
+
+  .next {
+    margin-left: 20px;
+    width: 60vw;
+    max-width: 400px;
+  }
+
+  .nextVideoIMG img {
+    max-width: 180px;
+  }
+}

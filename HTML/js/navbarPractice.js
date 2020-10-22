@@ -2,7 +2,7 @@
     const menu = document.querySelector('.menu');
     const menubar = document.querySelector('#menubar');
 
-    menubar.addEventListener('click', (e) => {
+    menubar.addEventListener('click', () => {
         if (window.getComputedStyle(menu).display === 'block') {
         menu.style.display = 'none';
         } else  {
