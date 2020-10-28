@@ -7,20 +7,44 @@ body {
 main {
   display: table;
 }
+
 header {
   padding: 10px;
 }
+
 button {
   width: 20%;
 }
 
-.img {
-  display: inline-block;
-  height: 100%;
-  width: 25%;
-}
 img {
   display: block;
   width: 100%;
-  height: 100%;
+}
+
+.img {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+
+.img-selected > img {
+  opacity: 0.5;
+}
+
+.img-selected {
+  background-color: white;
+}
+
+.img-magnified {
+  z-index: 1;
+}
+
+.img-magnified > img + img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 70vw;
+  vertical-align: middle;
+  opacity: 0.95;
 }
