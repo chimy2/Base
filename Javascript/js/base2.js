@@ -6,6 +6,8 @@
 
 // 2. Variable(변수)
 // let (added in ES6)
+// read, write
+// only use let if variable needs to change
 // ES6는 대부분의 브라우저에서 지원하므로 걱정없이 사용가능하지만
 // 호환성이 중요한 경우 babel을 이용하여 ES6이상으로 개발하고 배포 시에 버전을 내려서 개발 
 
@@ -55,6 +57,7 @@ console.log(age3);
 
 
 // 3. Constant(상수)
+// read only
 // favor immutable data type always for a few reasons
 // (1) security : 해커의 공격으로 인한 값의 변경을 막는다
 // (2) thread safety : thread들이 동시에 값을 참조할 때 동시에 값을 변경하다면 위험할 수 있다
@@ -62,9 +65,15 @@ console.log(age3);
 const dayInWeek=7;
 const maxNumber=5;
 
+// Note
+// Immutable data type : primitibe type, frozen object (i.e. object.freeze())
+// Mutable data type : all object by default are mutable in JS
+
 // 4. Variable types
 // primitive, single item : number, string, boolean, null, undefined, symbol
+// primitive 타입은 value로 값이 저장됨
 // object, box container
+// object 타입은 object를 가리키는 reference가 값에 저장된다
 // function, first-class function
 const count=17; // integer
 const size=17.1; // decimal number
