@@ -1,0 +1,98 @@
+[
+    {
+      "color": "pink",
+      "sort": "t",
+      "sex": "female",
+      "size": "large"
+    },
+    {
+      "color": "blue",
+      "sort": "p",
+      "sex": "man",
+      "size": "small"
+    },
+    {
+      "color": "yellow",
+      "sort": "p",
+      "sex": "man",
+      "size": "large"
+    },
+    {
+      "color": "yellow",
+      "sort": "s",
+      "sex": "man",
+      "size": "large"
+    },
+    {
+      "color": "blue",
+      "sort": "s",
+      "sex": "female",
+      "size": "small"
+    },
+    {
+      "color": "blue",
+      "sort": "t",
+      "sex": "male",
+      "size": "large"
+    },
+    {
+      "color": "yellow",
+      "sort": "t",
+      "sex": "male",
+      "size": "large"
+    },
+    {
+      "color": "pink",
+      "sort": "p",
+      "sex": "female",
+      "size": "small"
+    },
+    {
+      "color": "pink",
+      "sort": "t",
+      "sex": "female",
+      "size": "large"
+    },
+    {
+      "color": "blue",
+      "sort": "p",
+      "sex": "man",
+      "size": "small"
+    },
+    {
+      "color": "yellow",
+      "sort": "p",
+      "sex": "man",
+      "size": "large"
+    },
+    {
+      "color": "yellow",
+      "sort": "s",
+      "sex": "man",
+      "size": "large"
+    },
+    {
+      "color": "blue",
+      "sort": "s",
+      "sex": "female",
+      "size": "small"
+    },
+    {
+      "color": "blue",
+      "sort": "t",
+      "sex": "male",
+      "size": "large"
+    },
+    {
+      "color": "yellow",
+      "sort": "t",
+      "sex": "male",
+      "size": "large"
+    },
+    {
+      "color": "pink",
+      "sort": "p",
+      "sex": "female",
+      "size": "small"
+    }
+  ]

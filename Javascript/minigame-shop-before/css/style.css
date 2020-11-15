@@ -1,0 +1,129 @@
+:root {
+  --background-color: #ecbbac;
+  --background-color2: white;
+  --background-color3: #fc8f8f;
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+div {
+  margin: 20px auto;
+  width: 550px;
+  min-height: 500px;
+  background-color: var(--background-color2);
+  text-align: center;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+main {
+  padding-bottom: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  outline: none;
+}
+
+.selectList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 93%;
+  height: 70px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.selectList li {
+  width: 75px;
+}
+
+.selectList li img {
+  width: 55px;
+}
+
+.selectList li img:hover {
+  width: 65px;
+}
+
+.selectList li a:hover {
+  font-size: 20px;
+}
+
+.blue,
+.yellow,
+.pink {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: #6b8bf5;
+}
+
+.yellow {
+  background-color: #eee27b;
+}
+
+.pink {
+  background-color: #ffa5a5;
+}
+
+.listSection {
+  scroll-snap-type: mandatory;
+  height: 415px;
+  overflow-y: auto;
+  /* firefox scroll none */
+  scrollbar-width: none;
+}
+
+.listSection::-webkit-scrollbar {
+  /* chrome scroll none */
+  display: none;
+}
+
+.clothesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.clothesList li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 99%;
+  border-radius: 5px;
+  margin: 2px 0;
+  background-color: var(--background-color3);
+}
+
+.clothesList img {
+  width: 40px;
+  padding: 0 15px;
+}
+
+.clothesList p {
+  font-size: 18px;
+}
