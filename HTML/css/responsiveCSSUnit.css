@@ -1,0 +1,35 @@
+/* CSS 구조
+selector {
+    property : value
+}
+*/
+
+/*  CSS Unit 종류
+        (1) Absolute value 
+            - 컨테이너의 사이즈가 변경되어도 고정값으로 유지된다 
+            ex. px(화면에 나타낼 수 있는 가장 작은 단위), pt, cm
+        (2) Relative value
+
+            ex. em, rem, vw, vh, %
+                1) em(relative of parent element) 
+                 - 부모의 font-size의 배수, 1em=100%
+                2) rem(relavtive to root element)
+                 - 루트의 fornt-size의 배수
+                3) vw, vh(viewport related)
+                4) %(parent related)
+                 - 부모요소에 의해 상대적으로 크기 계산
+ */
+
+/* 
+    parent에 따라 사이즈 변경 : %, em
+    브라우저의 크기에 따라 사이즈 변경 : vw, vh, rem
+ */
+
+/* 
+    요소의 넓이와 높이에 따라 사이즈 변경 : %, vw, vh
+    폰트 사이즈에 따라 사이즈 변경 : em, rem
+  */
+
+/*  px을 em으로 변환한 값을 바로 계산해주는 사이트
+  http://pxtoem.com/
+   */
