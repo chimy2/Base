@@ -16,33 +16,34 @@ const styles=theme=>({
   },table: {
     minWidth: 1080
   }
-})
+});
 
-const customer=[{
-  'id': 1,
-  'image': 'https://placeimg.com/64/64/1',
-  // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-  'name': 'chimy',
-  'birthday': 951013,
-  'gender': '남자',
-  'job': '학생'
-},{
-  'id': 2,
-  'image': 'https://placeimg.com/64/64/2',
-  // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-  'name': '치미',
-  'birthday': 940824,
-  'gender': '여자',
-  'job': '개발자'
-},{
-  'id': 3,
-  'image': 'https://placeimg.com/64/64/3',
-  // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-  'name': '침침',
-  'birthday': 951124,
-  'gender': '남자',
-  'job': '프리랜서'
-}]
+const customer=[
+  {
+      'id': 1,
+      'image': 'https://placeimg.com/64/64/1',
+      // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
+      'name': 'chimy',
+      'birthday': 951013,
+      'gender': '남자',
+      'job': '학생'
+    },{
+      'id': 2,
+      'image': 'https://placeimg.com/64/64/2',
+      // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
+      'name': '치미',
+      'birthday': 940824,
+      'gender': '여자',
+      'job': '개발자'
+    },{
+      'id': 3,
+      'image': 'https://placeimg.com/64/64/3',
+      // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
+      'name': '침침',
+      'birthday': 951124,
+      'gender': '남자',
+      'job': '프리랜서'
+    }];
 
 function App(props) {
   const {classes}=props;
