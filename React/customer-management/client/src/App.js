@@ -7,6 +7,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import { withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { Component } from 'react';
 
 const styles=theme=>({
@@ -16,48 +17,40 @@ const styles=theme=>({
     overflowX: 'auto'
   },table: {
     minWidth: 1080
+  },progress: {
+    margin: theme.spacing.unit*2
   }
 });
 
-// const customers=[
-//   {
-//       'id': 1,
-//       'image': 'https://placeimg.com/64/64/1',
-//       // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-//       'name': 'chimy',
-//       'birthday': 951013,
-//       'gender': '남자',
-//       'job': '학생'
-//     },{
-//       'id': 2,
-//       'image': 'https://placeimg.com/64/64/2',
-//       // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-//       'name': '치미',
-//       'birthday': 940824,
-//       'gender': '여자',
-//       'job': '개발자'
-//     },{
-//       'id': 3,
-//       'image': 'https://placeimg.com/64/64/3',
-//       // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-//       'name': '침침',
-//       'birthday': 951124,
-//       'gender': '남자',
-//       'job': '프리랜서'
-//     }];
+/* React Library Component Life Cycle
+
+  1. constructor()
+
+  2. componentWillMount()
+
+  3. render()
+
+  4. componentDidMount()
+
+*/
+/* 
+  update props or state => shouldComponentUpdate()
+*/
 
 class App extends Component {
   constructor(){
     super();
     this.state={
-      customers: ""
+      customers: "",
+      completed: 0
     };
   }
 
   componentDidMount(){
+    this.timer = setInterval(this.progress, 20);
     this.callApi()
+    // .then(res=>console.log("이행값", res), res=>console.log("거부값", res))
       .then(res => this.setState({customers: res}))
-      // .then(res=>console.log("이행값", res), res=>console.log("이행값", res))
       .catch(console.log);
   }
 
@@ -65,6 +58,11 @@ class App extends Component {
     const response = await fetch('/api/customers');
     const body = await response.json();
     return body;
+  }
+
+  progress = () => {
+    const { completed } = this.state;
+    this.setState({completed: completed >= 100 ? 0 : completed+1});
   }
 
   render(){
@@ -97,7 +95,12 @@ class App extends Component {
                     job={c.job}
                     />
                 );
-              }) : ""
+              }) : 
+              <TableRow>
+                <TableCell colSpan="6" align="center">
+                  <CircularProgress className={classes.progress} variant="determinate" value={this.state.completed} />
+                </TableCell>
+              </TableRow>
             }
           </TableBody>
         </Table>
