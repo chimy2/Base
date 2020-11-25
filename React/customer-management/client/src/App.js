@@ -6,7 +6,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { Component } from 'react';
 
 const styles=theme=>({
   root: {
@@ -18,69 +19,91 @@ const styles=theme=>({
   }
 });
 
-const customer=[
-  {
-      'id': 1,
-      'image': 'https://placeimg.com/64/64/1',
-      // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-      'name': 'chimy',
-      'birthday': 951013,
-      'gender': '남자',
-      'job': '학생'
-    },{
-      'id': 2,
-      'image': 'https://placeimg.com/64/64/2',
-      // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-      'name': '치미',
-      'birthday': 940824,
-      'gender': '여자',
-      'job': '개발자'
-    },{
-      'id': 3,
-      'image': 'https://placeimg.com/64/64/3',
-      // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
-      'name': '침침',
-      'birthday': 951124,
-      'gender': '남자',
-      'job': '프리랜서'
-    }];
+// const customers=[
+//   {
+//       'id': 1,
+//       'image': 'https://placeimg.com/64/64/1',
+//       // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
+//       'name': 'chimy',
+//       'birthday': 951013,
+//       'gender': '남자',
+//       'job': '학생'
+//     },{
+//       'id': 2,
+//       'image': 'https://placeimg.com/64/64/2',
+//       // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
+//       'name': '치미',
+//       'birthday': 940824,
+//       'gender': '여자',
+//       'job': '개발자'
+//     },{
+//       'id': 3,
+//       'image': 'https://placeimg.com/64/64/3',
+//       // random으로 이미지를 보여주는 사이트로 64*64크기로 설정
+//       'name': '침침',
+//       'birthday': 951124,
+//       'gender': '남자',
+//       'job': '프리랜서'
+//     }];
 
-function App(props) {
-  const {classes}=props;
-  return (
-    <Paper className={classes.root}>
-      <Table className={classes.table}>
-        <TableHead>
-          <TableRow>
-            <TableCell>번호</TableCell>
-            <TableCell>이미지</TableCell>
-            <TableCell>이름</TableCell>
-            <TableCell>생년월일</TableCell>
-            <TableCell>성별</TableCell>
-            <TableCell>직업</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-        {
-          customer.map(c=>{
-            return(
-              <Customer
-                // map 사용 시 key값이 필요하므로 에러가 발생한다
-                key={c.id}
-                id={c.id}
-                image={c.image}
-                name={c.name}
-                birthday={c.birthday}
-                gender={c.gender}
-                job={c.job}
-                />
-            );
-          })
-        }
-        </TableBody>
-      </Table>
-    </Paper>
-  );
+class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      customers: ""
+    };
+  }
+
+  componentDidMount(){
+    this.callApi()
+      .then(res => this.setState({customers: res}))
+      // .then(res=>console.log("이행값", res), res=>console.log("이행값", res))
+      .catch(console.log);
+  }
+
+  callApi = async () => {
+    const response = await fetch('/api/customers');
+    const body = await response.json();
+    return body;
+  }
+
+  render(){
+    const {classes}=this.props;
+    return (
+      <Paper className={classes.root}>
+        <Table className={classes.table}>
+          <TableHead>
+            <TableRow>
+              <TableCell>번호</TableCell>
+              <TableCell>이미지</TableCell>
+              <TableCell>이름</TableCell>
+              <TableCell>생년월일</TableCell>
+              <TableCell>성별</TableCell>
+              <TableCell>직업</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {
+              this.state.customers ? this.state.customers.map(c=>{
+                return(
+                  <Customer
+                    // map 사용 시 key값이 필요하므로 에러가 발생한다
+                    key={c.id}
+                    id={c.id}
+                    image={c.image}
+                    name={c.name}
+                    birthday={c.birthday}
+                    gender={c.gender}
+                    job={c.job}
+                    />
+                );
+              }) : ""
+            }
+          </TableBody>
+        </Table>
+      </Paper>
+    );
+  }
 }
 
 export default withStyles(styles)(App);
