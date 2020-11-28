@@ -39,12 +39,22 @@ const styles=theme=>({
 */
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
       customers: "",
       completed: 0
     };
+  }
+
+  stateRefresh = () => {
+    this.setState({
+      customers: "",
+      completed: 0
+    });
+    this.callApi()
+      .then(res => this.setState({customers: res}))
+      .catch(console.log);
   }
 
   componentDidMount(){
@@ -107,7 +117,7 @@ class App extends Component {
             </TableBody>
           </Table>
         </Paper>  
-        <CustomerAdd/>
+        <CustomerAdd stateRefresh={this.stateRefresh}/>
       </div>
     );
   }
