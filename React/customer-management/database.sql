@@ -16,3 +16,9 @@ insert into customer values (2, 'http://placeimg.com/64/64/2', '치미', 940824,
 insert into customer values (3, 'http://placeimg.com/64/64/3', '침침', 951124, '남자', '프리랜서');
 insert into customer values (4, 'http://placeimg.com/64/64/4', '쥐민', 130613, '남자', '변호사');
 insert into customer values (5, 'http://placeimg.com/64/64/5', '쥐민', 201127, '여자', '검사');
+
+alter table customer add createdDate datetime;
+alter table customer add isDeleted int;
+
+update customer set createdDate = now();
+update customer set isDeleted = 0;
